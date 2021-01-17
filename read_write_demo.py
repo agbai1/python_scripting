@@ -1,7 +1,7 @@
-f = open('/Users/ekea./python_scripting/some_file.txt', 'r')
-file_data = f.read()
-f.close()
+with open('/Users/ekea./python_scripting/some_file.txt', 'r') as f:
+    file_data = f.read()
 
-new_f = open('/Users/ekea./python_scripting/another_file.txt', 'w')
-new_f.write(file_data)
-new_f.close()
+
+with open('/Users/ekea./python_scripting/another_file.txt', 'w') as new_f:
+    new_f.write(file_data)
+    new_f.close()
