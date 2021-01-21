@@ -1,16 +1,15 @@
 def user_input_numlist(numList):
-    result = 0
-    for num in numList:
-        if num % 2 == 0:
-            result += num
+    sum_list = 0
+    numList = []
+    for i in range(10):
+        number = int(input("Enter numbers: "))
+        try:
+            numList.append(number)
+            if number % 2 == 0:
+            sum_list += number
+        except ValueError:
+            print("Incorrect value. That's not an int!")
 
     return result
 
-numList = []
-numbers = (input("Enter numbers seperated by commas: ").split(','))
-
-for num in numbers:
-    numList.append(int(num))
-
-sum_of_even_num  = user_input_numlist(numList)
-print("The sum of the even numbers in user_list is: ", sum_of_even_num)
+print("The sum of the even numbers in user_list is: ", user_input_numlist(numList))
